@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Slider</title>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+  <link href="./styles.css" rel="stylesheet" />
+	<script language="javascript">
+		var posicion = 0;
+		var mover = 0;
+		
+		function moverI(){
+			if(control > -13){
+				control--;
+				mover-= 100;
+				document.getElementsByClassName("slider-slides-wrapper").style.marginLeft = mover + "px";
+			}
+		}
+		
+		function moverD(){
+			if (control <0){
+				control++;
+				mover += 100;
+				document.getElementsByClassName("slider-slides-wrapper").style.marginRight = mover + "px";
+			}
+		}
+	</script>
+</head>
+<body>
+  <div id="slider" class="slider">
+    <div class="slider-slides-wrapper">
+      <div class="slider-slide fade">
+        <img src="images/1.jpg" />
+      </div>
+      <div class="slider-slide fade">
+        <img src="images/2.jpg" />
+      </div>
+      <div class="slider-slide fade">
+        <img src="images/3.jpg" />
+      </div>
+    </div>
+    <div class="slider-controls">
+		<form>
+			<button type="button" onClick="moverI">Izquierda</button>
+			<button type="button" onClick="moverD">Derecha</button>
+		</form>
+    </div>
+    <nav class="slider-nav">
+      <div class="slider-nav-item active" onClick="posicionSlide(1)"></div>
+      <div class="slider-nav-item" onClick="posicionSlider(2)"></div>
+      <div class="slider-nav-item" onClick="posicionSlider(3)"></div>
+    </nav>
+  </div>
+</body>
+</html>

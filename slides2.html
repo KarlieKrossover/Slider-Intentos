@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Slider</title>
+  <link href="./styles1.css" rel="stylesheet" />
+</head>
+	<body>
+		<div class="slider">
+			<div class="fotos">
+					<img src="images/1.jpg"/>
+					<img src="images/2.jpg"/>
+					<img src="images/3.jpg"/>
+			</div>	
+		
+			<script language="javascript">
+			
+				var imagenes = [];//hice un arreglo con las imágenes
+				imagenes[0] = "images/1.jpg";//cada imagen tiene un valor debido a su posición
+				imagenes[1] = "images/2.jpg";
+				imagenes[2] = "images/3.jpg";
+			
+				var indiceImagenes = 0; //este indice indica en que imagen estás
+				var tiempo = 2000; //2000 = 2 segundos
+				
+				function cambiarImagenes(){
+				
+					document.getElementsByClassName("fotos") = imagenes[indiceImagenes];
+				
+					if(indiceImagenes < 2){ //si el indice tiene cualquier valor más perqueño que 2, se sumara 1 para que avance
+						indiceImagenes++;
+				   	}else{ //si el indice llega a 2, se regrasará a 0. Para hacer un tipo loop
+					   	indiceImagenes = 0;
+				   	}
+				}
+			
+				setInterval(cambiarImagenes, tiempo); //setInterval = función propia de javascript que te permite hacer que en terminado tiempo suceda algo
+
+			</script>
+		</div>
+	</body>
+</html>

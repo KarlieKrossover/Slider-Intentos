@@ -1,0 +1,28 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.slider {
+  width: 640px;
+  height: 420px;
+  overflow: hidden;
+  position: relative;
+  background-color: #ededed;
+}
+
+.fotos {
+  display: flex;
+  width: 1920px;
+  height: 420px;
+  flex-wrap: nowrap;
+}
+
+.fotos img {
+  height: 100%;
+}
